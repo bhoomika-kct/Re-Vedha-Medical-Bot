@@ -1,0 +1,11 @@
+[
+    {
+      "patient_id": "P001",
+      "report": "Mild fever and headache, advised rest."
+    },
+    {
+      "patient_id": "P002",
+      "report": "Allergy rash, prescribed antihistamines."
+    }
+  ]
+  

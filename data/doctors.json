@@ -1,0 +1,15 @@
+[
+    {
+      "id": "D001",
+      "name": "Dr. A. Patel",
+      "specialty": "General Physician",
+      "available_timings": ["5", "14"]
+    },
+    {
+      "id": "D002",
+      "name": "Dr. B. Khan",
+      "specialty": "Dermatologist",
+      "available_timings": ["11", "15"]
+    }
+  ]
+  

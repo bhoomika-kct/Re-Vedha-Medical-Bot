@@ -1,0 +1,16 @@
+[
+    {
+        "id": "P001",
+        "name": "John Doe",
+        "age": 32,
+        "gender": "Male",
+        "linked_doctor_id": "D001"
+    },
+    {
+        "id": "P002",
+        "name": "Jane Smith",
+        "age": 27,
+        "gender": "Female",
+        "linked_doctor_id": "D002"
+    }
+]
