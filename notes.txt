@@ -1,0 +1,58 @@
+Prefering to database because data in the server may be loss if crashes. Concurrency problem.
+
+---
+Currently, it is running on full flask. But if the server fails, then UI will also disappear. To avoid that, we need different servers for front end and back-end. 
+If 2 servers, then 
+Folder Structure changes-
+In front end,
+Need update in API endpoints, in script.js
+Handling CORS errors
+
+In backend, adding CORS and origin, ensuring all api routes prefixed with /api/
+---
+File : UI (Following is possible only if 2 different servers)
+Server not started, but showing in the UI as "Online"
+
+----
+File: App.py 
+step 2:
+on returning the value "Please provide a valid Patient ID.", the logic is checking only whether the data is missing. Need to check the pattern matching for the patient Id.
+
+Need to store the patient id in the session object after getting the details from the database
+
+Step 3 - Get new user
+User may not provide all details in our specified format
+
+In adding patients, add_new_patient in utils ->as well as in step 3 itself using append json (Redudancy -> needs to avoid)
+
+def calculate_severity(symptoms_text) :
+keywords need better planning as the user may give keywords in different grammatical words
+Keywords more than 1 word in a string would not be a better option as it needs to be exactly matched.
+
+Suggestions update needed. 
+We doesn't know whether actually screen time is the only reason for head ache. we also not have collected those details and duration of headache.
+
+step 4 to step 5.
+if symptoms are severe, after saying severe it needs to go to automatically to step 4 before returning in step 3.
+--
+Also if the system fails in making appointments or listing doctors, we may show an emeragency helpline number. or we may send a patient details to a hospital, so that they can contact. 
+--
+While loading patient data initially itself, we can load all data as a json to session object, instead of accessing each time
+--
+
+Need separate file for handling doctor's availability. 
+In doctors.json, 
+speciality needs to be list, as one doctor may over see.
+needs to remove available timings.
+
+linked doctor id should not be in patients.json, 
+may be we can store the last consulted doctors.
+
+need to store appointment status, time,date.
+
+doctor availability - > datewise accessible and slots also. 
+need to get phone number of patients.
+
+
+--
+needs to develop separate ui for managing the doctor's availability and patient records for hospitals,
